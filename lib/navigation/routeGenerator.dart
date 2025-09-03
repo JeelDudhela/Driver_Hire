@@ -21,7 +21,7 @@ import 'package:flutter/material.dart';
 import '../user/Home/detail_screen.dart';
 import '../user/Home/waiting_driver.dart';
 
-class RouteGenerator{
+class RouteGenerator {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRoute.splash:
@@ -35,16 +35,15 @@ class RouteGenerator{
           settings: settings,
         );
       case AppRoute.login:
-        final loginAs = settings.arguments as String? ?? 'user'; // default to 'user'
+        final loginAs =
+            settings.arguments as String? ?? 'user'; // default to 'user'
         return MaterialPageRoute(
           builder: (context) => LoginScreen(loginAs: loginAs),
           settings: settings,
         );
       case AppRoute.register:
         final role = settings.arguments as String;
-        return MaterialPageRoute(
-          builder: (_) => RegisterScreen(),
-        );
+        return MaterialPageRoute(builder: (_) => RegisterScreen());
 
       case AppRoute.forgotPassword:
         return MaterialPageRoute(
@@ -121,8 +120,6 @@ class RouteGenerator{
           settings: settings,
         );
 
-
-
       case AppRoute.rideRequestDetailScreen:
         return MaterialPageRoute(
           builder: (context) => RideRequestDetailScreen(),
@@ -148,12 +145,9 @@ class RouteGenerator{
           builder: (context) => TermsScreen(),
           settings: settings,
         );
-
-
     }
     return MaterialPageRoute(
       builder: (context) => Container(child: Text("ERROR")),
     );
   }
-
 }

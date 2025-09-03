@@ -71,7 +71,7 @@ class _DriverHomeScreenState extends State<DriverHomeScreen> {
   }
 
   PreferredSizeWidget _buildAppBar() {
-    return AppBar(
+    return AppBar(automaticallyImplyLeading: false,
       backgroundColor: AColor().White,
       elevation: 0,
       centerTitle: true,
