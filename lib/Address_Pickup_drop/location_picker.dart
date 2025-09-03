@@ -118,7 +118,8 @@ class _LocationPickerState extends State<LocationPicker> {
       ),
       children: [
         TileLayer(
-          urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+          urlTemplate: "https://cartodb-basemaps-a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+          userAgentPackageName: 'com.driver_hire.app',
         ),
         MarkerLayer(markers: [
           Marker(
